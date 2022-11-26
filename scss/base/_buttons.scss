@@ -1,0 +1,50 @@
+.button {
+    display: inline-flex;
+    height: 40px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 130%;
+    color: $Dark-Grey;
+}
+
+.info-card {
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button {
+        @media screen and (max-width: 768px) {
+            flex: 1 1 50%;
+        }
+        transition: all 0.2s ease 0s;
+        background-color: $Green-Color;
+        min-width: 127px;
+        box-shadow: 0px 0px 0px 1px $Green-Color;
+        &:hover {
+            background-color: #A9CE3F;
+        }
+        &:focus {
+            box-shadow: 0px 0px 0px 1px $Dark-Grey;
+        }
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+    &__button--secondary {
+        background-color: inherit;
+        box-shadow: 0px 0px 0px 1px $Dark-Grey;
+        &:hover {
+            background-color: inherit;
+            text-decoration: underline;
+        }
+        &:focus {
+            box-shadow: 0px 0px 0px 1px $Green-Color;
+            text-decoration: none;
+        }
+    }
+}

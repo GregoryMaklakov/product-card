@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-@import './components/vars';
-@import './components/mixins';
-@import './components/rating';
+@import './base/vars';
+@import './base/mixins';
+@import './base/rating';
+@import './base/buttons';
+@import './base/checkbox';
+@import './base/animation';
 
 @import './blocks/options';
 @import './blocks/first-option';
+@import './blocks/second-option';
 
 
 * {
@@ -60,9 +64,4 @@ h5,
 h6 {
 	font-weight: inherit;
 	font-size: inherit;
-}
-.product-first {
-    background-color: red;
-    height: 100vh;
-    width: 100%;
 }

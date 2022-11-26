@@ -1,0 +1,130 @@
+.text-checkbox {
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 165%;
+    color: $Dark-Grey;
+    margin-right: 8px;
+}
+
+
+//CB-SIZE
+.option {
+    display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+    &__item {
+		position: relative;
+		cursor: pointer;
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+    &__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus + .option__label:before {
+            box-shadow: 0px 0px 0px 1px $Green-Color;
+            border: none;
+            transition: all 0.3s ease 0s;
+		}
+		&:checked + .option__label:before {
+            background: $Green-Color;
+		}
+		&:disabled + .option__label:before {
+			background-color: #BDBDBD;
+			opacity: 0.4;
+			cursor:no-drop;
+		}
+	}
+    &__label {
+		display: inline-flex;
+		align-items: center;
+        justify-content: center;
+        position: relative;
+		cursor: pointer;
+		gap: 10px;
+		&:before {
+			content: "";
+			align-self: flex-start;
+			width: 24px;
+			height: 24px;
+			flex: 0 0 24px;
+			border: 1px solid #4F4F4F;
+		}
+	}
+
+    &__text {
+        position: absolute;
+        font-weight: 300;
+        font-size: rem(12);
+        line-height: 165%;
+        color: #4F4F4F;
+    }
+}
+
+//CB-COLOR
+.option-color {
+    display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+    &__item {
+		position: relative;
+		cursor: pointer;
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+    &__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus + .option-color__label:before {
+            box-shadow: 0px 0px 0px 1px inherit;
+            border: none;
+            transition: all 0.3s ease 0s;
+		}
+		&:checked + .option-color__label:before {
+            background: $Green-Color;
+		}
+        &:checked + .option-color__label--orange:before {
+            box-shadow: 0px 0px 0px 1px inherit;
+            background: #FAA541;
+		}
+	}
+    &__label {
+		display: inline-flex;
+		align-items: center;
+        justify-content: center;
+        position: relative;
+		cursor: pointer;
+		gap: 10px;
+		&:before {
+			content: "";
+			align-self: flex-start;
+			width: 16px;
+			height: 16px;
+            background: $Green-Color;
+            border-radius: 50%;
+			flex: 0 0 16px;
+			border: 1px solid #4F4F4F;
+		}
+	}
+    &__label--orange {
+        &:before {
+			content: "";
+            background: #FAA541;
+		}
+    }
+
+    &__text {
+        position: absolute;
+        font-weight: 300;
+        font-size: rem(12);
+        line-height: 165%;
+        color: #4F4F4F;
+    }
+}
+
