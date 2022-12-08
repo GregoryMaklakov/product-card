@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Product Card</title>
 </head>
 <body>
@@ -15,6 +15,7 @@
                 <div class="card__image">
                     <img class="card__img" src="../img/card-image.png" alt="nike">
                 </div>
+                
 
                 <div class="card__information info-card">
                     <button type="submit" class="info-card__close">
@@ -25,6 +26,7 @@
                     <h1 class="info-card__title">Nike React Infinity Run Flyknit 3 Mens</h1>
                     <div class="info-card__price">$159.00</div>
 
+                   <!--Рейтинг нашел в инете, к нему идет JS - но в нем не разобраля пока что! -->
                     <div class="rating rating_set">
                         <div class="rating__body">
                             <div class="rating__active"></div>
@@ -42,7 +44,7 @@
                     </div>
 
                     <div class="info-card__size">
-                        <div class="text-cb">Size:</div>
+                        <div class="text-checkbox">Size:</div>
                         <div class="option">
                             <div class="option__item">
                                 <input id="o_1" class="option__input" type="radio" value="1" name="option">
@@ -57,8 +59,8 @@
                                 <label for="o_3" class="option__label"><span class="option__text">43</span></label>
                             </div>
                             <div class="option__item">
-                                <input id="o_4" class="option__input" type="radio" value="4" name="option">
-                                <label for="o_4" class="option__label"><span class="option__text">44</span></label>
+                                <input id="o_4" disabled class="option__input" type="radio" value="4" name="option">
+                                <label for="o_4" disabled class="option__label"><span class="option__text">44</span></label>
                             </div>
                             <div class="option__item">
                                 <input id="o_5" class="option__input" type="radio" value="5" name="option">
@@ -68,7 +70,7 @@
                     </div>
 
                     <div class="info-card__color">
-                        <div class="text-cb">Color:</div>
+                        <div class="text-checkbox">Color:</div>
                         <div class="option option-color">
                             <div class="option-color__item">
                                 <input id="o_6" class="option-color__input" checked type="radio" value="1" name="color">
@@ -83,7 +85,7 @@
 
                     <div class="info-card__buttons">
                         <button type="submit" class="info-card__button button">Buy now</button>
-                        <button type="submit" class="info-card__button button">Add to cart</button>
+                        <button type="submit" class="info-card__button info-card__button--secondary button">Add to cart</button>
                     </div>
                 </div>
                 
